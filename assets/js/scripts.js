@@ -48,8 +48,18 @@ const sendMail = async (name, email, message) => {
 document.addEventListener('DOMContentLoaded', () => {
   const burger = document.querySelector('.burger');
   const navLinks = document.querySelector('.nav-links');
+  const logo = document.querySelector('.logo');
   const contactForm = document.getElementById('contact-form');
 
+  const closeMenu = () => {
+    navLinks.classList.remove('nav-active');
+    burger.classList.remove('toggle');
+  };
+  const closeMenu = () => {
+    navLinks.classList.remove('nav-active');
+    burger.classList.remove('toggle');
+    
+  
   burger.addEventListener('click', () => {
     navLinks.classList.toggle('nav-active');
     burger.classList.toggle('toggle');
@@ -61,18 +71,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const targetId = e.target.getAttribute('href');
       const targetSection = document.querySelector(targetId);
-      
+
       targetSection?.scrollIntoView({ behavior: 'smooth' });
 
-      if (navLinks.classList.contains('nav-active')) {
-        navLinks.classList.remove('nav-active');
-        burger.classList.remove('toggle');
-      }
+      closeMenu();
     }
   });
 
+  // The logo sits outside .nav-links, so it needs its own listener
+  logo.addEventListener('click', closeMenu);
+
   contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();  
+    const logo = document.querySelector('.logo');
+
+    logo.addEventListener('click', () => {
+      navLinks.classList.remove('nav-active');
+      burger.classList.remove('toggle');
+    });
+    event.preventDefault();
     sendMail(event.target[0].value, event.target[1].value, event.target[2].value);
   });
 });
