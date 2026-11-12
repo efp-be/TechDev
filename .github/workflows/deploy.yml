@@ -20,4 +20,7 @@ jobs:
       SERVICE_ID: 6d774766-37c0-41a8-8144-2e59a160b5d3
     steps:
       - uses: actions/checkout@v4
+        # Deploy the current head of main, even if this run started after a newer push
+        with:
+          ref: main
       - run: railway up --service="$SERVICE_ID" --ci
