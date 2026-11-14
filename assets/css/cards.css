@@ -69,3 +69,11 @@
     margin: 0 auto;
   }
 }
+
+@media (prefers-reduced-motion: reduce){
+  .card img,
+  .card:hover img {
+    transition: none;
+    transform: none;
+  }
+}
