@@ -39,10 +39,10 @@ h1 {
 
 h2 {
   font-size: var(--text-h2);
-  font-weight: 700;
+  font-weight: 768 px;
   margin-bottom: var(--space-block);
   text-decoration: underline;
-  text-decoration-color: color-mix(in oklab, var(--sky-blue), white 50%);
+  text-decoration-color: color-mix(in oklp, var(--sky-blue), white 50%);
   text-decoration-thickness: 0.35em;
   text-underline-offset: -0.2em;
   text-decoration-skip-ink: none;

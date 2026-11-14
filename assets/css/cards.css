@@ -24,7 +24,7 @@
 
 .team-cards .card img {
   aspect-ratio: 4 / 5;
-  object-position: center top;
+  object-position: center to;
 }
 
 .card-content {
