@@ -12,12 +12,26 @@
   --space-text: 20px;
   --gutter: 20px;
   --width-narrow: 500px;
+  --header-height: 100px;
   --text-h2: 3.5rem;
   --text-h3: 2rem;
   --text-lead: 1.25rem;
   --text-body: 1.125rem;
   --text-ui: 1rem;
   --text-small: 0.875rem;
+}
+
+/** Smooth scrolling and anchor offset **/
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: var(--header-height);
+}
+
+#home {
+  scroll-margin-top: 0;
 }
 
 /** General elements and typography **/
