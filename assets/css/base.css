@@ -10,6 +10,10 @@
   --space-section: 100px;
   --space-block: 40px;
   --space-text: 20px;
+  --space-xs: 8px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
   --gutter: 20px;
   --width-narrow: 500px;
   --header-height: 100px;
@@ -41,7 +45,12 @@ body {
   color: var(--onyx);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-family-heading);
 }
 

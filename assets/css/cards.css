@@ -28,19 +28,19 @@
 }
 
 .card-content {
-  padding-top: 24px;
+  padding-top: var(--space-lg);
 
   &::before {
     content: "";
     display: block;
     width: 40px;
     height: 3px;
-    margin-bottom: 16px;
+    margin-bottom: var(--space-md);
     background: var(--sky-blue);
   }
 
   p.card-intro {
-    margin-bottom: 12px;
+    margin-bottom: var(--space-sm);
     font-size: 0.875rem;
     font-weight: 600;
     text-transform: uppercase;
@@ -56,12 +56,12 @@
 }
 
 .card h3 {
-  margin: 0 0 8px 0;
+  margin: 0 0 var(--space-xs) 0;
   font-weight: 700;
   line-height: 1.2;
 }
 
-/* Responsive: one column, as wide as the form, instead of 2 cards + 1 orphan */
+/* Responsive : une seule colonne, aussi large que le formulaire, au lieu de 2 cartes + 1 orpheline */
 @media (max-width: 900px) {
   .service-cards, .team-cards {
     grid-template-columns: 1fr;
