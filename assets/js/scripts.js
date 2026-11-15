@@ -63,7 +63,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();  
-    sendMail(event.target[0].value, event.target[1].value, event.target[2].value);
+    event.preventDefault();
+    const { elements } = event.target;
+    sendMail(
+      elements['name'].value,
+      elements['email'].value,
+      elements['message'].value
+    );
   });
 });
