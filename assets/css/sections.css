@@ -23,5 +23,7 @@
 @media (max-width: 768px) {
   .about p, .intro {
     max-width: none;
+  max-width: var(--width-narrow);
+
   }
 }
